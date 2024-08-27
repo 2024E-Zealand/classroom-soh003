@@ -6,17 +6,27 @@ using System.Threading.Tasks;
 
 namespace ClassRoomNet60
 {
-    internal class Klasserum
+    public class Klasserum
     {
         public string KlasseNavn {  get; set; }
         public List<Studerende> Klasseliste {  get; set; }
         public DateTime SemesterStart { get; set; }
        
-        //Konstruktør
+        //Konstruktør default
         public Klasserum()
         {
             
         }
 
+
+
+        //konstruktør
+
+        public Klasserum(string klasseNavn, List<Studerende> klasseliste, DateTime semesterStart)
+        {
+            KlasseNavn = klasseNavn;
+            Klasseliste = klasseliste;
+            SemesterStart = semesterStart;
+        }
     }
 }
