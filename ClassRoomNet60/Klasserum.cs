@@ -36,7 +36,7 @@ namespace ClassRoomNet60
             Console.WriteLine("Personer: ");
             foreach (var Studerende in this.Klasseliste)
             {
-                Console.WriteLine($"Navn: {Studerende.Navn}, Fødselsmåned: {Studerende.Fødselsmåned}, Fødselsdag: {Studerende.Fødselsdag}");
+                Console.WriteLine($"Navn: {Studerende.Navn}, Fødselsmåned: {Studerende.Fødselsmåned}, Fødselsdag: {Studerende.Fødselsdag}, Årstid: {Studerende.UdskrivÅrstid()}");
             }
         }
 
