@@ -44,5 +44,10 @@ namespace ClassRoomNet60
             Fødselsmåned = fødselsmåned;
             Fødselsdag = fødselsdag;
         }
+
+        public override string ToString()
+        {
+            return $"{{{nameof(Navn)}={Navn}, {nameof(Fødselsmåned)}={Fødselsmåned.ToString()}, {nameof(Fødselsdag)}={Fødselsdag.ToString()}}}";
+        }
     }
 }

@@ -16,7 +16,10 @@ studerende.Add(studerende3);
 DateTime semesterStartDato = new DateTime(2022, 09, 01);
 
 
-Klasserum klasserum = new Klasserum("3B", studerende, semesterStartDato);
+Klasserum klasserum3B = new Klasserum("3B", studerende, semesterStartDato);
+
+
+klasserum3B.UdskrivKlasseLokale();
 
 
 

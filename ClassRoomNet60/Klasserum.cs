@@ -28,5 +28,26 @@ namespace ClassRoomNet60
             Klasseliste = klasseliste;
             SemesterStart = semesterStart;
         }
+
+        public void UdskrivKlasseLokale()
+        {
+            Console.WriteLine($"Klasselokale :{this.KlasseNavn}");
+
+            Console.WriteLine("Personer: ");
+            foreach (var Studerende in this.Klasseliste)
+            {
+                Console.WriteLine($"Navn: {Studerende.Navn}, Fødselsmåned: {Studerende.Fødselsmåned}, Fødselsdag: {Studerende.Fødselsdag}");
+            }
+        }
+
+        //ToString
+
+        public override string ToString()
+        {
+            return $"{{{nameof(KlasseNavn)}={KlasseNavn}, {nameof(Klasseliste)}={Klasseliste}, {nameof(SemesterStart)}={SemesterStart.ToString()}}}";
+        }
+
+        
+
     }
 }
