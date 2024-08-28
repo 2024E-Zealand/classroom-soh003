@@ -23,3 +23,4 @@ klasserum3B.UdskrivKlasseLokale();
 
 
 
+klasserum3B.UdskrivFødselsdagePrÅrstid();

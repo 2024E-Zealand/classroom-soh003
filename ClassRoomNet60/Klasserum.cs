@@ -29,6 +29,8 @@ namespace ClassRoomNet60
             SemesterStart = semesterStart;
         }
 
+        //Funktioner
+        //Udskriv info om klasselokale
         public void UdskrivKlasseLokale()
         {
             Console.WriteLine($"Klasselokale :{this.KlasseNavn}");
@@ -38,6 +40,20 @@ namespace ClassRoomNet60
             {
                 Console.WriteLine($"Navn: {Studerende.Navn}, Fødselsmåned: {Studerende.Fødselsmåned}, Fødselsdag: {Studerende.Fødselsdag}, Årstid: {Studerende.UdskrivÅrstid()}");
             }
+        }
+
+        //udskriv fødselsdage pr. årstid
+        public void UdskrivFødselsdagePrÅrstid()
+        {
+            int vinterCount = Klasseliste.Count(s => s.UdskrivÅrstid() == "Vinter");
+            int forårCount = Klasseliste.Count(s => s.UdskrivÅrstid() == "Forår");
+            int sommerCount = Klasseliste.Count(s => s.UdskrivÅrstid() == "Sommer");
+            int efterårCount = Klasseliste.Count(s => s.UdskrivÅrstid() == "Efterår");
+
+            Console.WriteLine($"Antal studerende med fødselsdag om vinteren: {vinterCount}");
+            Console.WriteLine($"Antal studerende med fødselsdag om foråret: {forårCount}");
+            Console.WriteLine($"Antal studerende med fødselsdag om sommeren: {sommerCount}");
+            Console.WriteLine($"Antal studerende med fødselsdag om efteråret: {efterårCount}");
         }
 
         //ToString
